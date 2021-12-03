@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <!-- Custom Style -->
+    <style>
+        :root {
+            --body-bg: rgb(204, 204, 204);
+            --white: #ffffff;
+            --darkWhite: #ccc;
+            --black: #000000;
+            --dark: #615c60;
+            --themeColor: #22b8d1;
+            --pageShadow: 0 0 0.5cm rgba(0, 0, 0, 0.5);
+        }
+
+        @import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@600&display=swap');
+
+  
+
+      
+
+
+
+        .page,.page2 {
+            padding-top: 0px;
+            margin:20px;
+            width: 450mm;
+            height: 520mm;
+            
+        }
+       
+        p {
+            margin-top: 2mm;
+            font-size: 22px;
+            
+
+        }
+        .main{
+            margin-left: 200px;
+        }
+
+        .top-content {
+            padding-bottom: 0px;
+        }
+
+        .logo img {
+            height: 190px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+
+
+        }
+        
+        .table1{
+            
+            margin-left: 400px;
+            width: 70%;
+            
+           
+       }
+       .col{
+           padding: 40px;
+       }
+        .heading  {
+            text-align: center;
+            
+        }
+
+        .pic {
+            margin-top: 40px;
+            margin-right:60px ;
+            width: 280px;
+
+        }
+        table{
+            margin-left: 20%;
+        }
+
+        table,
+        th,
+        td {
+            border: 1.5px solid black;
+            width: 100%;
+            table-layout: fixed;
+            
+            
+            
+
+        }
+       
+        .data{
+            width: 70%;
+            padding: 20px;
+            margin-left: 0px;
+            text-align: center;
+            
+        }
+        .data2 td{
+            width: 50%;
+            column-width: 50%;
+            
+        } 
+
+         th {
+            width: 15%;
+            padding-left: 2%;  
+            font-size: 22px;
+            
+        }
+       
+
+        td {
+            
+            width: 5%;
+            padding-left: 2%;
+            font-size: 22px;
+            font-weight:590;
+        }
+
+        .data1 td,th{
+            width: 50%;
+            column-width: 50%;
+        }
+        .col{
+            right: 300px;
+            width: 50%;
+        }
+
+        .tb{
+        margin: 0%;
+           
+           
+        }
+        .table2{
+            margin-left: 230px;
+        }
+        .fig{
+            float: left;
+            width: 33.33%;
+            padding: 5px;
+        }
+        .graph::after{
+            content: '';
+            clear: both;
+            display:table;
+
+        }
+    </style>
+
+
+    <title>Report Card</title>
+</head>
+
+<!-- <body background="\dependencies\images\back.png" style="background-repeat: no-repeat; background-size: 120% 100%;"> -->
+<body background="{{path}}\dependencies\images\back.png" style="background-repeat: repeat; background-size: 100% 52%;"> 
+    
+    <div class="my-5 page">
+        <p class="mr-5"><b>&emsp;Round I - Enhanced Score Report:</b> {{name}}
+            <br>
+            &emsp;Reg Number : {{reg_num}}
+        </p>
+        <div class="row main">
+            <div style="width: 80%; align-items: center;">
+                <div class="heading mt-3">
+                    <h2 style="font-size:40px; font-weight: bolder;">INTERNATIONAL MATHS OLYMPIAD CHALLENGE</h2>
+                </div>
+                <div class="logo">
+                    <!-- <img src='\dependencies\images\logo.png' alt="logo" class="img-fluid"> -->
+                    <img src='{{path}}\dependencies\images\logo.png' alt="logo" class="img-fluid">
+                </div>
+                <div class="r1 text-center">
+                <h4 style="font-size:24px; font-weight: bolder;"> Round I performance of {{name}}</h4>
+                </div>
+            </div>
+            <div class='pic' style="flex-grow:0.5;">
+                <!-- <img src="\dependencies\images\ABC1 XYZ1.png" alt="profile_pic" class="img-fluid"> -->
+                <img src="{{path}}\dependencies\images\{{name}}.png" alt="profile_pic" class="img-fluid">
+            </div>
+        </div>
+
+        <div class="container row table1">
+            <div class="col mt-3 col-6">
+                <table class= "data1">
+                    <tr >
+                        <th>Grade</th>
+                        <td>{{grade}}</td>
+                    </tr>
+                    <tr>
+                        <th>School Name</th>
+                        <td>{{school}}</td>
+                    </tr>
+                    <tr>
+                        <th>City of Residence</th>
+                        <td>{{city}}</td>
+                    </tr>
+                    <tr>
+                        <th>Country of Residence</th>
+                        <td>{{country}}</td>
+                    </tr>
+                    
+                </table>
+            </div>
+            <div class="col mt-3 col-6">
+                <table class='data1'>
+                    <tr>
+                        <th>Registration Number</th>
+                        <td>{{reg_num}}</td>
+                    </tr>
+                    <tr>
+                        <th>Gender</th>
+                        <td>{{gender}}</td>
+                    </tr>
+                    <tr>
+                        <th>Date of Birth</th>
+                        <td>{{dob}}</td>
+                    </tr>
+                    <tr>
+                        <th>Date of Exam</th>
+                        <td>{{date}}</td>
+                    </tr>
+                    
+                </table>
+            </div>
+        </div><br><br><br>
+        <div class="r1 text-center">
+            <i><h4 style="font-size:24px; font-weight: bolder;" >Section 1</h4></i><br>
+            <i><h5 style="font-size:18px; font-weight: bolder;">This section describes ABC5 XYZ5's performance v/s the Test in Grade 3 </h5></i>
+        </div>
+        <div class="data mt-4" style="margin-right: 312px;">
+            <table>
+                <tr class="bg-dark text-white">
+                  
+                    <th>Question No.</th>
+                    <th>Attempt Status</th>
+                    <th>{{name}}'s Choice</th>
+                    <th>Correct Answer</th>
+                    <th>Outcome</th>
+                    <th>Score if Correct</th>
+                    <th>{{name}}'s Score</th>
+                
+                </tr>
+                {% for item in data1 %}
+                <tr>
+                    {% for items in item  %}
+                    <td>{{items}}</td>
+                    {% endfor %}
+                </tr>
+                {% endfor %}
+
+                <tr>
+                    <th style="text-align: left;" colspan="10">Total Marks : {{total}}/100</th>
+                </tr>
+                <tr>
+                    <th style="text-align: left;" colspan="10">Final Result : {{final_result}}</th>
+                </tr>
+            </table>
+        </div>
+        
+    </div>
+    <br><br><br><br><br><br><br>
+    <div class="page2">
+        <br><br>
+        <div class="r1 text-center">
+            <i><h4 style="font-size:24px; font-weight: bolder;" >Section 2</h4></i><br>
+            <i><h5 style="font-size:18px; font-weight: bolder;">This section describes ABC5 XYZ5's performance v/s the Rest of the World in Grade 3 </h5></i>
+            <br>
+            <table class="container-fluid"  style=" margin-left: 20px;">
+                <tr class="bg-dark text-white">
+                  
+                    <th>Question No.</th>
+                    <th>Attempt Status</th>
+                    <th>{{name}}'s Choice</th>
+                    <th>Correct Answer</th>
+                    <th>Outcome</th>
+                    <th>{{name}}'s Score</th>
+                    <th>% of students across the world who attempted this question</th>
+                    <th>% of students from those who attempted this) who got it correct</th>
+                    <th>% of students from those who attempted this) who got it incorrect</th>
+                    <th>World Average in this question</th>
+                
+                </tr>
+                {% for item in data2 %}
+                <tr>
+                    {% for items in item  %}
+                    <td>{{items}}</td>
+                    {% endfor %}
+                </tr>
+                {% endfor %}
+
+            </table>
+        </div>
+        <div class="foot">
+            <br>
+            <h5><b>{{name}}'s</b> overall percentile is <b>{{percentile}}%ile</b>. This indicates that {{name}} has scored more than <b>{{percentile}}%</b> of students in World and lesser than <b>{{percentile}}%</b> of students in World.</h5>
+        </div><br>
+        <h3><b>Overview</b></h3>
+        <div class="container-fluid  row table2">
+            
+            <div class="col col-4">
+                <table class= "table-responsive text-center data1">
+                    <tr >
+                        <th>Average score of all students in World</th>
+                        <td>{{average_score}}</td>
+                    </tr>
+                    <tr>
+                        <th>Median score of all students in World</th>
+                        <td>{{median}}</td>
+                    </tr>
+                    <tr>
+                        <th>Mode score of all students in World</th>
+                        <td>{{mode}} </td>
+                    </tr>
+                    
+                </table>
+            </div>
+            <div class="col col-4">
+                <table class= "table-responsive text-center data1">
+                    <tr >
+                        <th>{{name}}'s attempts(Attempts x 100/Total Questions)</th>
+                        <td>{{attempts}}</td>
+                    </tr>
+                    <tr>
+                        <th>Average attempts of all students in World</th>
+                        <td>{{average_attempts}}</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="col col-4">
+                <table class= "table-responsive text-center data1">
+                    <tr>
+                        <th>{{name}}'s Accuracy(Corrects x 100/Attempts)</th>
+                        <td>{{accuracy}}</td>
+                    </tr>
+                    <tr>
+                        <th>Average accuracy of all students in World</th>
+                        <td>{{average_accuracy}}</td>
+                    </tr>
+                   
+                    
+                </table>
+            </div>
+        </div>
+
+        <div class="graph">
+            <div class="fig">
+                <img src={{figure1}} alt="" style="width: 100%;">
+            </div>
+            <div class="fig">
+                <img src={{figure2}} alt="" style="width: 100%;">
+            </div>
+            <div class="fig">
+                <img src={{figure3}} alt="" style="width: 100%;">
+            </div>
+            
+        </div>
+
+        
+
+
+        
+    </div>
+ 
+    
+    
+
+</body>
+
+</html>
